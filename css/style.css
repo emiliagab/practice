@@ -1,0 +1,93 @@
+/* Сброс стилей */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Основные стили */
+body { 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Шапка сайта */
+header { 
+    background: linear-gradient(90deg, #2c3e50, #3498db); 
+    color: white; 
+    padding: 1rem 0; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Навигация */
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+nav li { margin: 0 1rem; }
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+nav a:hover { background: rgba(255,255,255,0.2); }
+
+/* Основной контент */
+main { 
+    margin-top: 80px; 
+    padding: 2rem; 
+    max-width: 1200px; 
+    margin: 80px auto 0; 
+}
+
+/* Геройская секция */
+.hero { 
+    background: linear-gradient(45deg, #3498db, #2ecc71); 
+    height: 60vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white; 
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(52,152,219,0.3);
+}
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; }
+
+/* Карточки */
+.card { 
+    background: white; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+    padding: 2rem; 
+    margin: 1.5rem 0; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Подвал */
+footer { 
+    text-align: center; 
+    padding: 2rem; 
+    background: #34495e; 
+    color: white; 
+    margin-top: 3rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) { 
+    nav ul { flex-direction: column; text-align: center; }
+    .hero h1 { font-size: 2rem; }
+    main { padding: 1rem; }
+}
