@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Журнал | Mishkova</title>
+    <style>
+        :root {
+            --primary: #8B3A0F;
+            --accent: #E8220A;
+            --gold: #D4A017;
+            --bg: #FAF7F4;
+            --surface: #FFFFFF;
+            --text: #1C100A;
+            --text-muted: #6B4530;
+            --border: #E4D8D0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+        .mascot-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background: #FDF3EB; padding: 4px; border: 1px solid var(--gold); }
+        nav ul { list-style: none; display: flex; gap: 1.2rem; flex-wrap: wrap; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.2s; }
+        nav a:hover, nav a.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            flex: 1;  /* это заставляет контент растягиваться, прижимая футер */
+        }
+        h1 { font-size: 1.8rem; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 1rem; margin-bottom: 1rem; }
+        .post { background: var(--surface); border-radius: 28px; padding: 1.2rem; margin-bottom: 1.5rem; border: 1px solid var(--border); }
+        .post h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
+        .post p { color: var(--text-muted); }
+        footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 1rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        @media (max-width: 700px) { header { flex-direction: column; gap: 0.5rem; } }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo"><img src="https://placehold.co/200x200/8B3A0F/white?text=🐻" class="mascot-img"><span>Mishkova</span></div>
+    <nav><ul><li><a href="index.html">Главная</a></li><li><a href="about.html">О проекте</a></li><li><a href="team.html">Участники</a></li><li><a href="journal.html" class="active">Журнал</a></li><li><a href="resources.html">Ресурсы</a></li><li><a href="interaction.html">Партнёр</a></li></ul></nav>
+</header>
+<main class="container">
+    <h1>Журнал прогресса</h1>
+    <div class="post">
+        <h2>📊 10.02.2026 – Анализ аналогов</h2>
+        <p>Проанализировали 9 платформ (Duolingo, Babbel, Rosetta Stone). Выделили лучшие типы заданий: вставка слов, аудирование, кроссворды. Составили таблицу сильных и слабых сторон.</p>
+    </div>
+    <div class="post">
+        <h2>📋 25.02.2026 – Опрос 25 иностранцев</h2>
+        <p>Опросили студентов из Перу, Мексики, Колумбии. Главные боли: не хватает практики произношения и культурного контекста. Добавим блок «Культура» и упражнения с микрофоном.</p>
+    </div>
+    <div class="post">
+        <h2>🖌️ 05.03.2026 – Маскот и прототип</h2>
+        <p>Создан маскот и утверждена цветовая гамма (#8B3A0F, #E8220A, #D4A017). В Figma собран кликабельный прототип MVP. Получено одобрение заказчика.</p>
+    </div>
+</main>
+<footer>© 2025 Проектная практика</footer>
+</body>
+</html>
