@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Партнёр | Mishkova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8B3A0F;
+            --accent: #E8220A;
+            --gold: #D4A017;
+            --bg: #FAF7F4;
+            --surface: #FFFFFF;
+            --text: #1C100A;
+            --text-muted: #6B4530;
+            --border: #E4D8D0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.5; }
+        header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.8rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+        .mascot-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background: #FDF3EB; padding: 4px; border: 1px solid var(--gold); }
+        nav ul { list-style: none; display: flex; gap: 1.2rem; flex-wrap: wrap; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.2s; }
+        nav a:hover, nav a.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 1.5rem; }
+        h1 { font-size: 1.8rem; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 1rem; margin-bottom: 1rem; }
+        .info-card { background: var(--surface); border-radius: 28px; padding: 1rem; margin-bottom: 1rem; border: 1px solid var(--border); }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .highlight { background: rgba(232,34,10,0.05); border-left: 4px solid var(--accent); }
+        footer { background: var(--surface); border-top: 1px solid var(--border); text-align: center; padding: 1rem; margin-top: 2rem; color: var(--text-muted); font-size: 0.8rem; }
+        @media (max-width: 700px) { header { flex-direction: column; gap: 0.5rem; } }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo"><img src="https://placehold.co/200x200/8B3A0F/white?text=🐻" class="mascot-img"><span>Mishkova</span></div>
+    <nav><ul><li><a href="index.html">Главная</a></li><li><a href="about.html">О проекте</a></li><li><a href="team.html">Участники</a></li><li><a href="journal.html">Журнал</a></li><li><a href="resources.html">Ресурсы</a></li><li><a href="interaction.html" class="active">Партнёр</a></li></ul></nav>
+</header>
+<main class="container">
+    <h1>Отчёт о взаимодействии с Русским домом в Лиме</h1>
+    <div class="info-card"><strong>Дата встречи:</strong> 15 марта 2026 года (онлайн-конференция)</div>
+    <div class="info-card"><strong>Участники:</strong> команда проекта, куратор практики Юрченко А.В.</div>
+    <h2 style="font-size: 1.4rem; margin: 1rem 0 0.5rem;">Обсуждённые вопросы</h2>
+    <div class="grid-2">
+        <div class="info-card"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Уточнение целевой аудитории (студенты 18–25 лет)</div>
+        <div class="info-card"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Предоставление аутентичных диалогов и культурных материалов</div>
+        <div class="info-card"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Требования к защите персональных данных</div>
+        <div class="info-card"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Стажировка двух студентов в Русском доме в Лиме (июнь 2026)</div>
+    </div>
+    <h2 style="font-size: 1.4rem; margin: 1rem 0 0.5rem;">Полученные знания и связь с проектом</h2>
+    <div class="info-card highlight">
+        <p>Встреча помогла скорректировать интерфейс (упростить навигацию), добавить раздел «Культурный гид». Партнёр предоставит тестовую группу носителей для бета-тестирования.</p>
+    </div>
+    <div class="info-card" style="text-align: center;">
+        <i class="fas fa-handshake fa-2x" style="color: var(--gold);"></i>
+        <p style="margin-top: 0.5rem;">Скриншот онлайн-встречи (добавить по факту)</p>
+    </div>
+</main>
+<footer>© 2025 Проектная практика</footer>
+</body>
+</html>
