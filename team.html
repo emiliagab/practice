@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Команда | Mishkova</title>
+    <style>
+        :root {
+            --primary: #8B3A0F;
+            --accent: #E8220A;
+            --gold: #D4A017;
+            --bg: #FAF7F4;
+            --surface: #FFFFFF;
+            --text: #1C100A;
+            --text-muted: #6B4530;
+            --border: #E4D8D0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+        .mascot-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background: #FDF3EB; padding: 4px; border: 1px solid var(--gold); }
+        nav ul { list-style: none; display: flex; gap: 1.2rem; flex-wrap: wrap; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.2s; }
+        nav a:hover, nav a.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            flex: 1;
+        }
+        h1 { font-size: 1.8rem; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 1rem; margin-bottom: 1rem; }
+        h2 { font-size: 1.4rem; color: var(--primary); margin: 1.5rem 0 0.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.3rem; display: flex; align-items: center; gap: 8px; }
+        .team-card {
+            background: var(--surface);
+            border-radius: 28px;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--border);
+        }
+        .person-entry {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px dashed var(--border);
+        }
+        .person-entry:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .person-name {
+            font-weight: 700;
+            color: var(--primary);
+            display: inline-block;
+            min-width: 200px;
+        }
+        .person-role {
+            font-style: italic;
+            color: var(--accent);
+            margin-left: 0.5rem;
+        }
+        .person-contribution {
+            margin-top: 0.3rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+        footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 1rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        @media (max-width: 700px) { header { flex-direction: column; gap: 0.5rem; } }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo"><img src="https://placehold.co/200x200/8B3A0F/white?text=🐻" class="mascot-img"><span>Mishkova</span></div>
+    <nav><ul><li><a href="index.html">Главная</a></li><li><a href="about.html">О проекте</a></li><li><a href="team.html" class="active">Команда</a></li><li><a href="journal.html">Журнал</a></li><li><a href="resources.html">Ресурсы</a></li><li><a href="interaction.html">Партнёр</a></li></ul></nav>
+</header>
+<main class="container">
+    <h1>Команда проекта «Mishkova» и личный вклад каждого</h1>
+ 
+    <!-- Руководство -->
+    <h2>🎯 Руководство проекта</h2>
+    <div class="team-card">
+        <div class="person-entry">
+            <span class="person-name">Фомина Алина Константиновна</span>
+            <span class="person-role">Руководитель проекта</span>
+            <div class="person-contribution">Подготовка вводной информации на старте, распределение задач по участникам. Еженедельный контроль реализации задач всех направлений на протяжении всего проекта (13 итераций планёрок). Координация дизайна, контента, маркетинга, разработки и тестирования. Взаимодействие с куратором и заказчиком.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Юрченко Александр Владимирович</span>
+            <span class="person-role">Куратор проектной практики</span>
+            <div class="person-contribution">Организация кик-оффа проекта и вводного планирования. Утверждение задач для руководителей направлений (Фаизовой, Таряник, Саввовой, Дрибас, Бердиева). Контроль выполнения практики и связь с организацией-партнёром.</div>
+        </div>
+    </div>
+ 
+    <!-- Дизайн -->
+    <h2>🎨 Дизайн</h2>
+    <div class="team-card">
+        <div class="person-entry">
+            <span class="person-name">Фаизова Виктория Денисовна</span>
+            <span class="person-role">Руководитель дизайна</span>
+            <div class="person-contribution">Постановка задач дизайн-команде и контроль их исполнения. Разработка логики приложения (навигация, UX-потоки). Проектирование всех ключевых экранов приложения: главный экран, карточка урока, экран произношения, результаты урока, прогресс темы, словари, карточки слов, профиль, достижения, рейтинг, напоминания, настройки, тёмная тема, виджет. Разработка диалогов запроса разрешений (микрофон, уведомления). Проектирование экрана выбора уровня, целей и тем изучения.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Данилова Ульяна Сергеевна</span>
+            <span class="person-role">Дизайнер</span>
+            <div class="person-contribution">Разработка чернового варианта маскота приложения. Анализ логики приложений конкурентов (изучение UX конкурентов). Проектирование прототипов основных экранов приложения.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Исмайлова Оксана Геннадьевна</span>
+            <span class="person-role">Дизайнер</span>
+            <div class="person-contribution">Разработка чернового варианта маскота. Анализ логики приложений конкурентов. Проектирование прототипов основных экранов приложения.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Мухаммед Дониа Хани Хассан</span>
+            <span class="person-role">Дизайнер</span>
+            <div class="person-contribution">Разработка чернового варианта маскота. Разработка цветовой гаммы приложения (фирменные цвета, палитра интерфейса).</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Полетавкина Александра Дмитриевна</span>
+            <span class="person-role">Дизайнер</span>
+            <div class="person-contribution">Разработка чернового варианта маскота. Разработка логики приложения совместно с руководителем.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Хоанг Ань</span>
+            <span class="person-role">Дизайнер</span>
+            <div class="person-contribution">Разработка чернового варианта маскота. Разработка логики приложения (адаптация структуры под разные платформы).</div>
+        </div>
+    </div>
+ 
+    <!-- Контент -->
+    <h2>📝 Контент</h2>
+    <div class="team-card">
+        <div class="person-entry">
+            <span class="person-name">Саввова Ольга Игоревна</span>
+            <span class="person-role">Руководитель контента</span>
+            <div class="person-contribution">Постановка задач контент-команде и контроль выполнения. Общее руководство составлением учебных планов, тематических планов, уровней сложности, типов заданий и наполнением уроков. Разработка связей между темами курса. Координация вычитки и корректуры всех материалов.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Абубакар Сеид Нгабо</span>
+            <span class="person-role">Контент-менеджер</span>
+            <div class="person-contribution">Составление типов заданий для приложения (классификация форматов упражнений). Разработка связей между темами обучающего курса.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Балтаг Виктор Дмитриевич</span>
+            <span class="person-role">Контент-менеджер</span>
+            <div class="person-contribution">Создание плана заданий на аудирование. Составление учебных планов по разделам. Вычитка и корректура учебных материалов.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Сидикова Рухшона Хаким кизи</span>
+            <span class="person-role">Контент-менеджер</span>
+            <div class="person-contribution">Создание плана заданий на лексику. Составление определений уровней сложности (А1–Б2 и т.д.). Генерация вариантов ответов для интерактивных заданий.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Хохлова Екатерина Максимовна</span>
+            <span class="person-role">Контент-менеджер</span>
+            <div class="person-contribution">Анализ конкурентов — исследование форматов заданий в популярных языковых приложениях. Создание плана заданий на чтение. Наполнение уроков учебным контентом.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Чан Ван Мань</span>
+            <span class="person-role">Контент-менеджер</span>
+            <div class="person-contribution">Создание плана заданий по письму. Разработка тематических планов курса. Создание контента для уведомлений (push-сообщения, напоминания).</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Якуба Артём</span>
+            <span class="person-role">Контент-менеджер</span>
+            <div class="person-contribution">Создание плана заданий по говорению (упражнения на произношение). Создание интерактивных заданий для уроков.</div>
+        </div>
+    </div>
+ 
+    <!-- Маркетинг -->
+    <h2>📈 Маркетинг</h2>
+    <div class="team-card">
+        <div class="person-entry">
+            <span class="person-name">Таряник Арина Владимировна</span>
+            <span class="person-role">Руководитель маркетинга</span>
+            <div class="person-contribution">Постановка всех маркетинговых задач и контроль их выполнения. Подготовка опросов для сбора ожиданий от приложения. Разработка названия и слогана приложения («Mishkova»). Написание сценариев для промороликов. Разработка системы мотивации (тексты для возврата пользователей). Составление карты эмпатии целевой аудитории.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Аннагурбанова Сарыгул</span>
+            <span class="person-role">Маркетолог</span>
+            <div class="person-contribution">Создание реестра площадок для посевов (каналы продвижения). Написание SEO-текстов для описания приложения. Определение рубрик и форматов постов для социальных сетей. Разработка системы мотивации пользователей. Разработка системы реферальных ссылок. Составление карты эмпатии. Составление FAQ для пользователей.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Байраммырадова Гулджахан</span>
+            <span class="person-role">Маркетолог</span>
+            <div class="person-contribution">Разработка опроса по предпочтениям в темах и форматах контента. Анализ результатов опросов по предпочтениям аудитории. Формирование семантического ядра приложения. Подготовка текстов для описания в сторах (App Store, Google Play). Разработка гипотез для A/B-тестирования посадочной страницы. Составление графика публикаций. Подготовка рекламных баннеров. Подготовка email-рассылки. Разработка механики конкурса для привлечения первых пользователей.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Хабыбуллаев Авдыресул</span>
+            <span class="person-role">Маркетолог</span>
+            <div class="person-contribution">Анализ результатов опроса и формирование выводов по ожиданиям пользователей. Определение каналов трафика (SEO, соцсети, партнёрства). Разработка названия приложения. Написание приветственных писем и уведомлений для пользователей. Написание сценариев для промороликов. Создание скриптов для общения с пользователями в соцсетях. Разработка скриптов для модерации комментариев. Создание системы сбора обратной связи.</div>
+        </div>
+    </div>
+ 
+    <!-- Разработка -->
+    <h2>💻 Разработка</h2>
+    <div class="team-card">
+        <div class="person-entry">
+            <span class="person-name">Дрибас Диана Максимовна</span>
+            <span class="person-role">Руководитель разработки</span>
+            <div class="person-contribution">Постановка всех технических задач команде разработки и контроль их выполнения. Управление учебным процессом команды: организация освоения JavaScript (базовые конструкции, функции, объекты, массивы, современные возможности ES6+). Настройка мультимодульности проекта. Проектирование и контроль реализации архитектуры приложения.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Андреев Артём Михайлович</span>
+            <span class="person-role">Разработчик</span>
+            <div class="person-contribution">Отработка базовых конструкций JavaScript. Освоение функций, объектов и массивов объектов. Разработка схемы базы данных приложения.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Губанова Ольга Алексеевна</span>
+            <span class="person-role">Разработчик</span>
+            <div class="person-contribution">Отработка базовых конструкций JavaScript. Освоение функций, объектов и массивов объектов. Освоение методов массивов и современных конструкций JavaScript. Настройка мультимодульности проекта.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Журакулов Саидкамол Улмасжон угли</span>
+            <span class="person-role">Разработчик</span>
+            <div class="person-contribution">Отработка базовых конструкций JavaScript. Освоение функций, объектов и массивов объектов. Освоение методов массивов и современных конструкций JavaScript. Подключение базовых библиотек к проекту.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Закурнаев Владимир Владимирович</span>
+            <span class="person-role">Разработчик</span>
+            <div class="person-contribution">Отработка базовых конструкций JavaScript. Освоение функций, объектов и массивов объектов. Освоение методов массивов и современных конструкций JavaScript. Настройка репозитория проекта. Настройка мультимодульности приложения.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Козлитина Полина Романовна</span>
+            <span class="person-role">Разработчик</span>
+            <div class="person-contribution">Отработка базовых конструкций JavaScript. Освоение функций, объектов и массивов объектов. Освоение методов массивов и современных конструкций JavaScript. Проектирование моделей запросов к серверу.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Лубенская Дарья Александровна</span>
+            <span class="person-role">Разработчик</span>
+            <div class="person-contribution">Отработка базовых конструкций JavaScript. Освоение функций, объектов и массивов объектов. Освоение методов массивов и современных конструкций JavaScript. Проектирование моделей запросов к серверу.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Обмочевская Ольга Александровна</span>
+            <span class="person-role">Разработчик</span>
+            <div class="person-contribution">Отработка базовых конструкций JavaScript. Освоение функций, объектов и массивов объектов. Освоение методов массивов и современных конструкций JavaScript. Разработка схемы базы данных приложения.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Сокольников Иван Николаевич</span>
+            <span class="person-role">Разработчик</span>
+            <div class="person-contribution">Отработка базовых конструкций JavaScript. Освоение функций, объектов и массивов объектов. Освоение методов массивов и современных конструкций JavaScript. Подключение базовых библиотек к проекту.</div>
+        </div>
+    </div>
+ 
+    <!-- Тестирование и документация -->
+    <h2>🐞 Тестирование и документация</h2>
+    <div class="team-card">
+        <div class="person-entry">
+            <span class="person-name">Бердиев Вепа</span>
+            <span class="person-role">Руководитель тестирования</span>
+            <div class="person-contribution">Постановка задач команде тестирования и контроль их выполнения. Участие в еженедельных планёрках управленческого состава. Координация составления паспорта проекта, устава и документации.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Балтаг Виктор Дмитриевич</span>
+            <span class="person-role">Ответственный за документацию</span>
+            <div class="person-contribution">Составление паспорта проекта. Создание презентаций отчётов для первой и второй аттестации. Создание устава проекта. Создание пояснительной записки.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Габен Эмилия Сергеевна</span>
+            <span class="person-role">Тестировщик</span>
+            <div class="person-contribution">Участие в составлении паспорта проекта. Создание устава проекта.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Лай Суан Хьеу</span>
+            <span class="person-role">Тестировщик</span>
+            <div class="person-contribution">Участие в создании презентаций отчётов для аттестаций. Тестирование урока (функциональная проверка учебного модуля приложения).</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Лыонг Ван Дык</span>
+            <span class="person-role">Тестировщик</span>
+            <div class="person-contribution">Участие в составлении паспорта проекта. Создание презентации отчёта для второй аттестации.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Причалов Дмитрий Вячеславович</span>
+            <span class="person-role">Тестировщик</span>
+            <div class="person-contribution">Участие в составлении паспорта проекта. Создание пояснительной записки к проекту.</div>
+        </div>
+        <div class="person-entry">
+            <span class="person-name">Штогрина Арина Андреевна</span>
+            <span class="person-role">Тестировщик</span>
+            <div class="person-contribution">Создание презентации отчёта для первой аттестации. Тестирование установки и первого запуска приложения.</div>
+        </div>
+    </div>
+ 
+</main>
+<footer>2026 Проектная практика</footer>
+</body>
+</html>
