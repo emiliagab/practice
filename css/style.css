@@ -1,93 +1,150 @@
-/* Сброс стилей */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-/* Основные стили */
-body { 
-    font-family: 'Arial', sans-serif; 
-    line-height: 1.6; 
-    color: #333; 
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+:root {
+  --primary: #8B3A0F;
+  --primary-dark: #6f2e0c;
+  --accent: #E8220A;
+  --bg: #FAF7F4;
+  --surface: #FFFFFF;
+  --text: #1C100A;
+  --muted: #6B4530;
+  --border: #E4D8D0;
 }
 
-/* Шапка сайта */
-header { 
-    background: linear-gradient(90deg, #2c3e50, #3498db); 
-    color: white; 
-    padding: 1rem 0; 
-    position: fixed; 
-    width: 100%; 
-    top: 0; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Навигация */
-nav ul { 
-    list-style: none; 
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap;
-}
-nav li { margin: 0 1rem; }
-nav a { 
-    color: white; 
-    text-decoration: none; 
-    font-weight: bold; 
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-nav a:hover { background: rgba(255,255,255,0.2); }
-
-/* Основной контент */
-main { 
-    margin-top: 80px; 
-    padding: 2rem; 
-    max-width: 1200px; 
-    margin: 80px auto 0; 
+body {
+  background: linear-gradient(135deg, #FAF7F4, #FDF3EB);
+  color: var(--text);
 }
 
-/* Геройская секция */
-.hero { 
-    background: linear-gradient(45deg, #3498db, #2ecc71); 
-    height: 60vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    color: white; 
-    border-radius: 20px;
-    margin-bottom: 2rem;
-    box-shadow: 0 10px 30px rgba(52,152,219,0.3);
-}
-.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-.hero p { font-size: 1.2rem; }
-
-/* Карточки */
-.card { 
-    background: white; 
-    border-radius: 15px; 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
-    padding: 2rem; 
-    margin: 1.5rem 0; 
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover { 
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(139, 58, 15, 0.9);
+  padding: 15px 0;
+  z-index: 100;
 }
 
-/* Подвал */
-footer { 
-    text-align: center; 
-    padding: 2rem; 
-    background: #34495e; 
-    color: white; 
-    margin-top: 3rem;
+nav {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) { 
-    nav ul { flex-direction: column; text-align: center; }
-    .hero h1 { font-size: 2rem; }
-    main { padding: 1rem; }
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* HERO */
+.hero {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: var(--muted);
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.button {
+  padding: 14px 22px;
+  background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+/* PHONE MOCKUP */
+.phone {
+  width: 280px;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  transform: rotate(-5deg);
+}
+
+/* SECTION */
+.section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--surface);
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+/* JOURNAL */
+.post {
+  background: white;
+  padding: 20px;
+  border-left: 5px solid var(--primary);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
 }
